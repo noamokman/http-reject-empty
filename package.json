@@ -1,6 +1,6 @@
 {
   "name": "http-reject-empty",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A function to reject empty values with an http exception",
   "main": "lib/index.js",
   "scripts": {
