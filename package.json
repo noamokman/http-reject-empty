@@ -4,17 +4,14 @@
   "description": "A function to reject empty values with an http exception",
   "main": "lib/index.js",
   "scripts": {
-    "lint": "npm run lint-lib && npm run lint-test",
+    "lint": "run-p lint-*",
     "lint-lib": "eslint lib --fix",
     "lint-test": "eslint test --fix",
+    "precommit": "npm run lint",
+    "commitmsg": "validate-commit-msg",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "test": "npm run lint && istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly --report text --report html -- test",
     "posttest": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100"
-  },
-  "config": {
-    "ghooks": {
-      "pre-commit": "npm run lint"
-    }
   },
   "repository": {
     "type": "git",
@@ -37,17 +34,22 @@
     "url": "https://github.com/noamokman/http-reject-empty/issues"
   },
   "homepage": "https://github.com/noamokman/http-reject-empty",
+  "engines": {
+    "node": ">=4"
+  },
   "dependencies": {
     "http-errors": "^1.5.0"
   },
   "devDependencies": {
-    "babel-eslint": "^6.1.2",
     "chai": "^3.5.0",
-    "chai-as-promised": "^5.3.0",
-    "coveralls": "^2.11.9",
-    "eslint": "^3.0.1",
-    "eslint-config-noamokman": "^2.1.1",
-    "istanbul": "^0.4.4",
-    "mocha": "^2.5.3"
+    "chai-as-promised": "^6.0.0",
+    "coveralls": "^2.11.14",
+    "eslint": "^3.8.1",
+    "eslint-config-noamokman": "^5.0.1",
+    "husky": "^0.11.9",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.2",
+    "npm-run-all": "^3.1.1",
+    "validate-commit-msg": "^2.8.2"
   }
 }
