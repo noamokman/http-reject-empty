@@ -38,18 +38,18 @@
     "node": ">=4"
   },
   "dependencies": {
-    "http-errors": "^1.5.0"
+    "http-errors": "^1.6.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
-    "coveralls": "^2.11.14",
-    "eslint": "^3.8.1",
-    "eslint-config-noamokman": "^5.0.1",
-    "husky": "^0.11.9",
+    "coveralls": "^2.13.0",
+    "eslint": "^3.19.0",
+    "eslint-config-noamokman": "^5.2.0",
+    "husky": "^0.13.3",
     "istanbul": "^0.4.5",
-    "mocha": "^3.1.2",
-    "npm-run-all": "^3.1.1",
-    "validate-commit-msg": "^2.8.2"
+    "mocha": "^3.2.0",
+    "npm-run-all": "^4.0.2",
+    "validate-commit-msg": "^2.12.1"
   }
 }
