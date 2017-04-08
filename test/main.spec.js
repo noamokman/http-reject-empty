@@ -1,12 +1,10 @@
-const chai = require('chai');
-const chaiAsPromised = require('chai-as-promised');
-const {expect} = chai;
+import chai, {expect} from 'chai';
+import chaiAsPromised from 'chai-as-promised';
+import empty from '../lib';
 
 chai.use(chaiAsPromised);
 
 describe('http-reject-empty', () => {
-  const empty = require('../lib');
-
   describe('exports', () => {
     it('should expose a function', () => {
       expect(empty).to.be.a('function');
